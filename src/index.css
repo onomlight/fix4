@@ -1,0 +1,138 @@
+@font-face {
+    font-family: Noto-Sans-Korean;
+    src: url( https://fonts.google.com/noto/specimen/Noto+Sans+KR);
+   }
+body{
+    background-image: url(/public/bg_img.png);
+    font-family: Noto-Sans-Korean;
+}
+.max{
+    display: flex;
+    height: 1000px;
+    width: 100%;
+    
+}
+.loginset{
+    height: 100%;
+}
+.main{
+ width: 500px;
+ height: 700px;
+ margin: auto;
+ box-shadow: 1px 1px 1px 1px gray;
+ border-radius: 5px 5px 5px 5px;
+ background-color: white;
+}
+.logback{
+    height: 150px;
+    width: 100%;
+    background-color: #474E5C;
+    
+}
+.logback>img{
+    width: 70%;
+    margin: 50px 0 0 80px;
+}
+.some{
+    text-align: center;
+    height: 100px;
+}
+.account{
+    width: 400px;
+    height: 50px;
+    margin: auto;
+    
+}
+.bar{
+    width: 100%;
+}
+.inputbar{
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+    display: flex;
+    height: 400px;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+.bar button{
+    background-color: #474E5C;
+    color: white;
+}
+.bar input{
+    border: 0px;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+
+/* list css */
+
+.logback-list{
+    height: 100px;
+    width: 100%;
+    background-color: #474E5C;
+}
+.logback-list>img{
+    width: 50%;
+    margin: 40px 100px 0 30px;
+}
+.logback-list span{
+    color: white;
+    font-size: x-large
+}
+.inputbar-list{
+    width: 100%;
+    justify-items: center;
+    margin: auto;
+    display: flex;
+    height: 500px;
+    flex-wrap: wrap;
+    margin-left: 40px;
+    overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+}
+.inputbar-list::-webkit-scrollbar{
+    display: none; /* Chrome, Safari, Opera*/
+}
+.filedwarp{
+    width: 100%;
+}
+.textwarp{
+    width: 410px ;
+    height: 50px;
+    background-color: lightgray;
+    line-height : 50px;
+    border-radius: 5px ;
+    padding-left: 15px;
+    margin-top: 10px;
+
+}
+.account-list{
+    width: 80%;
+    height: 50px;
+    margin-left: 10px;
+    outline: none;
+    display:inline;
+    border: none;
+}
+.bar-list{
+    display: flex;
+    margin-left: 40px;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 425px;
+}
+.list-btn{
+    display:inline;
+    height: 50px;
+    outline:none;
+    background-color: white;
+    border: none;
+    width: 20%;
+}
+
+.bar-list span{
+    line-height: 50px;
+    color: lightgrey;
+}

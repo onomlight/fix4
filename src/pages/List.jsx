@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TodoBoard from './components/TodoBoard';
+import TodoBoard from '../components/TodoBoard';
 
 
 export default function List() {

@@ -23,7 +23,7 @@ export default function List() {
                                 <div className='filedwarp'>
                                     <h4>김스타</h4>
                                     <div className='textwarp'>
-                                        <p> 스타법무 법인에 오신것을 환영합니다!</p>
+                                        <p> 김스타입니다!!!</p>
                                     </div>    
                                 </div>
                                 <div className='filedwarp'>

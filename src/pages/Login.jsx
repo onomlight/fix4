@@ -45,6 +45,7 @@ export default function Login() {
         
        
 //     }
+// json 가져오기 시도1 
 //       axios.get('data/data.json')
 //   .then((Response)=>{console.log(Response.data)})
 //   .catch((Error)=>{console.log(Error)})
@@ -68,7 +69,7 @@ export default function Login() {
         e.preventDefault();
 
         try {
-            //서버가 없을땐 get으로 json 받기 / 링크 수정만하면됨
+            //서버가 없을땐 post, get으로 json 받기 / 링크 수정만하면됨
             const response = await axios.get(
                 // 엑세스 토큰 
                 'data/data.json',
@@ -79,10 +80,11 @@ export default function Login() {
                 }
                 
             );
-            console.log(JSON.stringify(response?.data));
+            // 일치여부 확인 콘솔확인
+            // console.log(JSON.stringify(response?.data));
                 const user = response.data.users.find((user)=>{
-                    console.log(user)
-                    console.log(Id,Password)
+                    // console.log(user)
+                    // console.log(Id,Password)
                     return (user.id===Id && user.password===Password)
                     
                 })
@@ -92,26 +94,19 @@ export default function Login() {
                 navigate('/List')
                 setErrMsg('')
             //console.log(JSON.stringify(response));
+                 //서버가 없어서 만든 후 서버 실행
             // const accessToken = response?.data?.accessToken;
             // const roles = response?.data?.roles;
-            // setAuth({ Id, Password , name : user.name }); // id pw 같으면 페이지 이동 서버로 보내는부분 
-            // back id,pw 받아서 user 정보 비교확인 == 서버가 프론트 토큰 받기
+            // setAuth({ Id, Password , name : user.name });
+        
             // setID('');
             // setPassword('');
-            //서버가 없어서 만든 후 서버 실행
+           
 
         } catch (err) {
-            console.log(err)
+            
             setErrMsg(err.message)
-            // if (!err?.response) {
-            //     setErrMsg('No Server Response');
-            // } else if (err.response?.status === 400) {
-            //     setErrMsg('Missing Username or Password');
-            // } else if (err.response?.status === 401) {
-            //     setErrMsg('Unauthorized');
-            // } else {
-            //     setErrMsg('Login Failed');
-            // } 로그인실패시 
+           
             errRef.current.focus();
             
         }
@@ -160,7 +155,9 @@ export default function Login() {
                                 value={Password} onChange={onPasswordHandler}
                             />   
                         </div>
+                        {/* 에러메세지 확인 */}
                         <div className="" ref={errRef}>
+                            
                         {errMsg}
                         </div>
                         <div className='bar'>

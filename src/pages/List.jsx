@@ -5,6 +5,7 @@ import TodoBoard from '../components/TodoBoard';
 export default function List() {
     const [inputValue,setInputValue] = useState ('')
     const [todoList,setTodoList] = useState([])
+    // const outname = JSON.parse("")
     const addItem =() => {
         console.log("hellooooo!",inputValue)
         setTodoList([...todoList,inputValue])
@@ -15,7 +16,9 @@ export default function List() {
                 <div className="loginset">
                     <div className="logback-list">
                         <img src="./logo.png" alt="" />
-                        <span>김스타</span>
+                        <span>김스타
+                            {/* {outname} */}
+                            </span>
                     </div>                    
                     <div className='inputbar-list'>
                         <div className="textfiled">
@@ -23,7 +26,7 @@ export default function List() {
                                 <div className='filedwarp'>
                                     <h4>김스타</h4>
                                     <div className='textwarp'>
-                                        <p> 김스타입니다!!!</p>
+                                        <p> 스타법무법인에 오신것을 환영합니다!</p>
                                     </div>    
                                 </div>
                                 <div className='filedwarp'>
